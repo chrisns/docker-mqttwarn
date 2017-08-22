@@ -8,7 +8,7 @@ function docker_tag_exists() {
     curl --silent -f -lSL https://index.docker.io/v1/repositories/$1/tags/$2 > /dev/null
 }
 
-if docker_tag_exists chrisns/mqttwarn ${VERSION}; then
+if docker_tag_exists chrisns/mqttwarn ${VERSION} || [ "${TRAVIS_EVENT_TYPE}" != "cron" ]; then
   echo ${VERSION} already exists
 else
   echo ${VERSION} does not yet exist
