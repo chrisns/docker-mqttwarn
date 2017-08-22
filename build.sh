@@ -12,6 +12,7 @@ if docker_tag_exists chrisns/mqttwarn ${VERSION} || [ "${TRAVIS_EVENT_TYPE}" != 
   echo ${VERSION} already exists
 else
   echo ${VERSION} does not yet exist
+  docker login -u="${DOCKER_USERNAME}" -p="${DOCKER_PASSWORD}"
   docker build -t chrisns/mqttwarn:${VERSION} --build-arg VERSION=${VERSION} .
   docker push chrisns/mqttwarn:${VERSION}
   docker tag chrisns/mqttwarn:${VERSION} chrisns/mqttwarn:latest
