@@ -1,5 +1,12 @@
 # Docker-mqttwarn
 
+[![Build Status](https://travis-ci.org/chrisns/docker-mqttwarn.svg?branch=master)](https://travis-ci.org/chrisns/docker-mqttwarn)
+![](https://img.shields.io/docker/stars/chrisns/docker-mqttwarn.svg)
+![](https://img.shields.io/docker/pulls/chrisns/docker-mqttwarn.svg)
+[![license](https://img.shields.io/github/license/chrisns/docker-mqttwarn.svg)]()
+[![GitHub contributors](https://img.shields.io/github/contributors/chrisns/docker-mqttwarn.svg)]()
+[![GitHub issues](https://img.shields.io/github/issues/chrisns/docker-mqttwarn.svg)]()
+
 This repo runs a job every 24hrs to check for recent updates to mqttwarn and updates a dockerhub repo with the latest image.
 
 You can depend on either `latest` or a git hash if you like a bit more stability
