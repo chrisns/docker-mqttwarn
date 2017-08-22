@@ -27,4 +27,4 @@ WORKDIR /usr/src/app
 
 COPY mqttwarn.tpl.ini .
 
-CMD dockerize -template mqttwarn.tpl.ini:mqttwarn.ini -stdout /usr/src/app/mqttwarn.log python /usr/src/app/mqttwarn.py
+CMD dockerize -template mqttwarn.tpl.ini:mqttwarn.ini -stdout /usr/src/app/mqttwarn.log -stderr /usr/src/app/mqttwarn.err python /usr/src/app/mqttwarn.py
